@@ -4,7 +4,6 @@ import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { Platform } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import Main from '~/pages/Main';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import Dashboard from './pages/Dashboard';
@@ -57,6 +56,7 @@ export default (isSigned = false) =>
                         Profile,
                     },
                     {
+                        resetOnBlur: true,
                         tabBarOptions: {
                             keyboardHidesTabBar: true,
                             activeTintColor: '#fff',
