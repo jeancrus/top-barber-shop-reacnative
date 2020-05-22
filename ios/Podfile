@@ -36,6 +36,7 @@ target 'barbermobile' do
 
 
 
+
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
   target 'barbermobileTests' do

@@ -16,7 +16,7 @@ export default function SelectProvider({ navigation }) {
         }
         loadProviders();
     }, []);
-
+    console.tron.log(providers);
     return (
         <Background>
             <Container>

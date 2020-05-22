@@ -24,7 +24,7 @@ export default function SignUp({ navigation }) {
     const [name, setName] = useState('');
 
     function handleSubmit() {
-        dispatch(signUpRequest(name, email, password));
+        dispatch(signUpRequest(name, email, password, navigation));
     }
     return (
         <Background>

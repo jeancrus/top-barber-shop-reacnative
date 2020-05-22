@@ -32,14 +32,15 @@ export function* signIn({ payload }) {
 }
 
 export function* signUp({ payload }) {
-    const { name, email, password } = payload;
+    const { name, email, password, navigation } = payload;
     try {
         yield call(api.post, '/users', {
             name,
             email,
             password,
         });
-        // history.push('/');
+        Alert.alert('Usuário criado com sucesso!');
+        navigation.navigate('SignIn');
     } catch (error) {
         yield put(signFailure());
         Alert.alert('Falha de criação', error.response.data.error);

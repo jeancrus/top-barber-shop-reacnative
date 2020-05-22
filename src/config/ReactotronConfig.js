@@ -4,9 +4,7 @@ import AsyncStorage from '@react-native-community/async-storage';
 import sagaPlugin from 'reactotron-redux-saga';
 
 if (__DEV__) {
-    const tron = Reactotron.configure({
-        name: 'BarberShop',
-    })
+    const tron = Reactotron.configure()
         .useReactNative()
         .setAsyncStorageHandler(AsyncStorage)
         .use(reactotronRedux())
