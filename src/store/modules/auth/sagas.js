@@ -12,6 +12,7 @@ export function* signIn({ payload }) {
             email,
             password,
         });
+        console.log('function*signIn -> payload', payload);
 
         if (user.provider) {
             yield put(signFailure());

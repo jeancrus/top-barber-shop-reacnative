@@ -18,11 +18,14 @@ import {
 export default function SignIn({ navigation }) {
     const dispatch = useDispatch();
     const loading = useSelector(state => state.auth.loading);
+    console.log('SignIn -> loading', loading);
     const passwordRef = useRef();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     function handleSubmit() {
+        console.log('SignIn -> ENTROU', loading);
+
         dispatch(signInRequest(email, password));
     }
 
